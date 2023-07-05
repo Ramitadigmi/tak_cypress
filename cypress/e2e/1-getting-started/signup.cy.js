@@ -12,6 +12,5 @@ describe('Signup Azurewebsites', () => {
     cy.get('#ConfirmPassword').type('ramita12345')
     cy.get('#submit').click()
     cy.get('.label-success').should('have.text', 'Registration Successful')
-    
   })
 })
