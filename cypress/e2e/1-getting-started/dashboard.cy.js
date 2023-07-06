@@ -67,5 +67,4 @@ describe('Login Azurewebsites', () => {
     cy.get('.btn-outline-danger').click()
     cy.url().should('include', '/Dashboard')
     })
-
 })
