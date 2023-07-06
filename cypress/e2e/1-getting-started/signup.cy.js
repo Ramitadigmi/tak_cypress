@@ -12,7 +12,7 @@ describe('Signup Azurewebsites', () => {
     cy.get('#ConfirmPassword').type('ramita12345')
     cy.get('#submit').click()
     cy.get('.label-success').should('have.text', 'Registration Successful')
-    //disini bakal gagal karena isian inputan user sudah pernah dibuat, agar bisa jalan coba ganti semua type inputan.
+    //disini bakal gagal karena isian inputan user sudah pernah dibuat, agar bisa jalan coba ganti semua type text inputan.
   })
 
   it('Failed Signup with same input field', () => { //testcasenegative1
