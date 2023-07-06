@@ -1,5 +1,5 @@
 describe('Signup Azurewebsites', () => {
-  it.skip('Succes Signup', () => { //testcasepositive
+  it('Succes Signup', () => { //testcasepositive
     cy.visit('https://itera-qa.azurewebsites.net/')
     cy.get('.form-inline > .navbar-nav > :nth-child(1) > .nav-link').click()
     cy.url().should('include', 'https://itera-qa.azurewebsites.net/UserRegister/NewUser')
@@ -12,9 +12,10 @@ describe('Signup Azurewebsites', () => {
     cy.get('#ConfirmPassword').type('ramita12345')
     cy.get('#submit').click()
     cy.get('.label-success').should('have.text', 'Registration Successful')
+    //disini bakal gagal karena isian inputan user sudah pernah dibuat, agar bisa jalan coba ganti semua type inputan.
   })
 
-  it.skip('Failed Signup with same input field', () => { //testcasenegative1
+  it('Failed Signup with same input field', () => { //testcasenegative1
     cy.visit('https://itera-qa.azurewebsites.net/')
     cy.get('.form-inline > .navbar-nav > :nth-child(1) > .nav-link').click()
     cy.url().should('include', 'https://itera-qa.azurewebsites.net/UserRegister/NewUser')
